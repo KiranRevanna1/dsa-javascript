@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# macOS
+.DS_Store
+
+# Editor (keeps the practice-mode settings local)
+.vscode/
+
+# Logs and secrets
+*.log
+npm-debug.log*
+.env
+.env.*

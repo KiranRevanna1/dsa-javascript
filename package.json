@@ -1,0 +1,8 @@
+{
+  "name": "dsa-javascript",
+  "private": true,
+  "description": "Striver A2Z solutions in JavaScript with tests",
+  "scripts": {
+    "new": "node new.js"
+  }
+}
