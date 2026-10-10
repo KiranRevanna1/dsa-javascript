@@ -1,15 +1,28 @@
 # DSA in JavaScript (Striver A2Z)
 
-My own solutions to the Striver A2Z sheet, one file per problem, each with its pattern, complexity and tests.
+My own solutions to [Striver's A2Z DSA Sheet](https://takeuforward.org/prep-hub/strivers-a2z-dsa-sheet), one file per problem, each with its pattern, complexity and tests.
+
+## Structure
+
+```
+01-beginner-problems/ … 20-maths/   ← one folder per sheet section, in sheet order
+  01-patterns/ 02-basic-maths/ …      ← one folder per sub-section
+    01-pattern-1.js                   ← one file per problem, already created with the title and link
+lib/check.js                          ← tiny test helper (prints ✓ / ✗)
+lib/a2z.json + lib/generate.js        ← the problem list and the script that created the files
+```
 
 ## Daily use
 
-1. `node new.js 3 lec1-easy/largest-element` creates `03-arrays/lec1-easy/largest-element.js` from the template. Folders follow the A2Z steps and lectures.
-2. Solve it in VS Code from a blank function. No AI, no autocomplete hints.
-3. Add the problem's examples plus one edge case as `check(...)` lines.
-4. `node 03-arrays/two-sum.js` runs the tests. Every line should show ✓.
-5. Submit on LeetCode if the problem is there. If not, the tests are the judge.
-6. After the morning session: `git add . && git commit -m "day N: X re-solves, Y new" && git push`.
+1. Open the problem's file (titles and links are already filled in).
+2. Write "In my words", then solve inside `solve()` from blank. No AI, no autocomplete.
+3. Uncomment the `check(...)` lines and fill in the problem's examples plus one edge case.
+4. Run it: `node 03-arrays/01-fundamentals/02-largest-element.js`. Every line should show ✓.
+5. Submit on LeetCode if there's a LeetCode link. If not, the tests are the judge.
+6. Fill Pattern, complexity and Key idea. After the morning session:
+   `git add . && git commit -m "day N: X re-solves, Y new" && git push`
+
+Extra problem not on the sheet? `node new.js 3 05-extra/problem-name` creates `03-arrays/05-extra/problem-name.js`.
 
 ## Re-solves
 
@@ -24,12 +37,10 @@ Overwrite the same file from blank. Git history keeps the old attempt.
 
 ## Find problems by pattern
 
-Every file has a `Pattern:` line, so search it:
-
 ```bash
 grep -rn "Pattern:" --include=*.js . | grep -i "two pointer"
 ```
 
 ## Problem statements
 
-Write the problem in your own words (1–3 lines) plus the link. Don't paste the full TUF/LeetCode statement: it's their content, and rewriting it is good practice anyway. The examples go in as tests.
+Read them on TUF/LeetCode. Here, write the problem in your own words (1–3 lines); the examples go in as tests.
