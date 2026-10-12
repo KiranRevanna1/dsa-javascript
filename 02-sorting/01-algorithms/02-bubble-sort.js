@@ -6,8 +6,18 @@
 
 const { check } = require("../../lib/check");
 
-function solve(input) {
-  // your solution
+class Solution {
+    bubbleSort(nums) {
+        let n=nums.length-1
+        for(let i=n; i>=0; i--){
+            for(let j=0; j<=i-1;j++){
+                if(nums[j]>nums[j+1]){
+                    [nums[j],nums[j+1]]= [nums[j+1], nums[j]]
+                }
+            }
+        }
+        return nums;
+    }
 }
 
 // Tests: problem examples + 1 edge case (uncomment and fill)
