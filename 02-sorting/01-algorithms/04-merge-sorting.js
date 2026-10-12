@@ -1,8 +1,8 @@
 // Problem: Merge Sorting
 // Link: https://takeuforward.org/blogs/data-structure-and-algorithm/merge-sort-algorithm
-// In my words: 
+// In my words: this works as divide and conquer it divides on mid using divide function then merge by getting sorted
 // Pattern:divide into halves, then merge sorted halves. | Time O(nlogn), Space O(n)
-// Key idea:
+// Key idea: divde and merge
 
 const { check } = require("../../lib/check");
 
