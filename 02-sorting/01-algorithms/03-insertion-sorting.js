@@ -1,7 +1,7 @@
 // Problem: Insertion Sorting
 // Link: https://takeuforward.org/blogs/data-structure-and-algorithm/insertion-sort-algorithm
 // In my words: what ever values comes before i is considered to be sorted based on key the arr[i] 
-// Pattern: save key → shift larger elements → insert key.      | Time O(n^2), Space O(1)
+// Pattern: save key → shift larger elements → insert key.      | Time O(nlogn), Space O(1)
 // Key idea: the j used to check and insert the greater value to the next index by using key we assign the previous duplicate value to value in te key eg: 7>4 inside while loop it becomes 77 then outside it becomes 47
 
 const { check } = require("../../lib/check");
