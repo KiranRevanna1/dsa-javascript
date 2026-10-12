@@ -6,10 +6,40 @@
 
 const { check } = require("../../lib/check");
 
-function solve(input) {
-  // your solution
+/*
+Definition of singly linked list:
+class ListNode{
+    constructor(x, next){
+        this.data = x;
+        this.next = next;
+    }
 }
+*/
 
+/**
+ * @param {ListNode} head
+ * @param {number} x
+ * @param {number} k
+ * @return {ListNode}
+ */
+
+class Solution {
+    insertAtKthPosition(head, x, k) {
+      //your code goes here
+      let newNode = new ListNode(x)
+      if(k===1){
+        newNode.next = head;
+        return newNode;
+      }
+      let current = head
+      for(let i=1; i<k-1; i++){
+        current = current.next
+      }
+        newNode.next = current.next
+        current.next = newNode
+      return head;
+    }
+}
 // Tests: problem examples + 1 edge case (uncomment and fill)
 // check(solve(/* input */), /* expected */, "example 1");
 // check(solve(/* input */), /* expected */, "example 2");
