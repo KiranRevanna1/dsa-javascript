@@ -2,7 +2,7 @@
 // Link: https://takeuforward.org/blogs/data-structure-and-algorithm/merge-sort-algorithm
 // In my words: this works as divide and conquer it divides on mid using divide function then merge by getting sorted
 // Pattern:divide into halves, then merge sorted halves. | Time O(nlogn), Space O(n)
-// Key idea: divde and merge
+// Key idea: - recursion call divides all while moving down the call stack. - the merge() executes only while recursive unwind comes backup. 
 
 const { check } = require("../../lib/check");
 
