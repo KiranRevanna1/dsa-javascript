@@ -1,13 +1,36 @@
 // Problem: Traversal in Linked List
 // Link: see Striver A2Z sheet → Linked List → Fundamentals Single LL
 // In my words:
-// Pattern:            | Time O(?), Space O(?)
-// Key idea:
+// Pattern:            | Time O(n), Space O(n)
+// Key idea: head is the first node in LL and it also holds entry point to all the element of LL using .next we can travese it
 
 const { check } = require("../../lib/check");
 
-function solve(input) {
-  // your solution
+/*
+Definition of singly linked list:
+class ListNode{
+    constructor(x, next){
+        this.data = x;
+        this.next = next;
+    }
+}
+*/
+
+/**
+ * @param {ListNode} head
+ * @return {Array}
+ */
+
+class Solution {
+    LLTraversal(head) {
+      let result = []
+      let current = head;
+      while(current != null){
+        result.push(current.data);
+        current = current.next 
+      }
+      return result; 
+    }
 }
 
 // Tests: problem examples + 1 edge case (uncomment and fill)
