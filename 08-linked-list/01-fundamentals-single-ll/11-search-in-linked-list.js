@@ -1,13 +1,21 @@
 // Problem: Search in Linked List
 // Link: see Striver A2Z sheet → Linked List → Fundamentals Single LL
 // In my words:
-// Pattern:            | Time O(?), Space O(?)
-// Key idea:
+// Pattern:            | Time O(n), Space O(1)
+// Key idea: 
 
 const { check } = require("../../lib/check");
-
-function solve(input) {
-  // your solution
+class Solution {
+    searchKey(head, key) {
+        let current = head;
+        while (current !== null) {
+            if (current.val === key) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
 }
 
 // Tests: problem examples + 1 edge case (uncomment and fill)
