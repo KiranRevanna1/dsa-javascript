@@ -10,13 +10,13 @@ class Solution {
     selectionSort(nums) {
         let n=nums.length-1
         for(let i=0; i<=n; i--){
-            let maxIndex=i;
+            let minIndex=i;
             for(let j=i; j<=n; j++){
-                if(nums[j]<nums[maxIndex]){
+                if(nums[j]<nums[minIndex]){
                     maxIndex=j
                 }
             }
-            [nums[i],nums[maxIndex]] = [nums[maxIndex], nums[i]]
+            [nums[i],nums[minIndex]] = [nums[minIndex], nums[i]]
         }
         return nums;
     }
