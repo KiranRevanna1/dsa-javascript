@@ -1,7 +1,7 @@
 // Problem: Find the length of the Linked List
 // Link: see Striver A2Z sheet → Linked List → Fundamentals Single LL
 // In my words:
-// Pattern:            | Time O(?), Space O(?)
+// Pattern:            | Time O(n), Space O(1)
 // Key idea: Use while (current !== null) when you need to process every node, including the last one.
 
 const { check } = require("../../lib/check");
