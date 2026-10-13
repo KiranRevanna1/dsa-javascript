@@ -1,8 +1,8 @@
 // Problem: Selection Sort
 // Link: https://takeuforward.org/blogs/data-structure-and-algorithm/selection-sort-algorithm
-// In my words:
-// Pattern:            | Time O(?), Space O(?)
-// Key idea:
+// In my words: minIndex is initailized to i and then wheen smallest element found in j loop it index is assigned to minIndex use the minIndex and swap the i and minIndex
+// Pattern: find smallest element than i from j - n if found assign the index to minIndex and swap the smallest minIndex with i | Time O(nlogn), Space O(1)
+// Key idea: find smallest element than i - n swap thhe smallest with i
 
 const { check } = require("../../lib/check");
 
