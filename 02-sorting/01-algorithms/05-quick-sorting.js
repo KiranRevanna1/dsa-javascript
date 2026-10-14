@@ -1,9 +1,11 @@
 // Problem: Quick Sorting
 // Link: https://takeuforward.org/blogs/data-structure-and-algorithm/quick-sort-algorithm
 // Time O(n^2), Space O(?)
-/* Key idea:Quick Sort doesn't directly sort the entire array. It places a pivot in its correct position, then recursively sorts the elements on either side.
-Once you understand why partition() returns pivotIndex, the recursive calls become much easier to understand. */
-
+/* Key idea:Quick Sort doesn't directly sort the entire array. 
+- It places a pivot in its correct position, then recursively sorts the elements on either side.
+- Once you understand why partition() returns pivotIndex, the recursive calls become much easier to understand. 
+- Quick Sort swaps elements to move smaller values to the left of the pivot and larger values to the right. 
+*/
 const { check } = require("../../lib/check");
 
 
