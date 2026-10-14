@@ -6,22 +6,17 @@
 
 const { check } = require("../../lib/check");
 
-
 class Solution {
     insertionSort(nums) {
         function insertion(arr, i, n) {
             if (i >= n) return;
-
             let j = i;
-
             while (j > 0 && arr[j - 1] > arr[j]) {
                 [arr[j - 1], arr[j]] = [arr[j], arr[j - 1]];
                 j--;
             }
-
             insertion(arr, i + 1, n);
         }
-
         insertion(nums, 0, nums.length);
         return nums;
     }
