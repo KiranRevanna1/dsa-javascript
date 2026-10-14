@@ -2,7 +2,7 @@
 // Link: see Striver A2Z sheet → Linked List → Fundamentals Single LL
 // In my words:
 // Pattern:            | Time O(1), Space O(1)
-// Key idea: using x finddd dthe next val of it assigning to current x
+// Key idea: using x find the next val of it assigning to current x
 
 const { check } = require("../../lib/check");
 
