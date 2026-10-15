@@ -1,7 +1,6 @@
 // Problem: Delete Kth Element of Doubly Linked List
 // Link: see Striver A2Z sheet → Linked List → Fundamentals Doubly LL
 // In my words:
-// Pattern:            | Time O(?), Space O(?)
 /*
   Remember the pointer pattern
   For a DLL:
@@ -13,7 +12,6 @@
 */
 
 const { check } = require("../../lib/check");
-
 
 class Solution {
     deleteKthElement(head, k) {
