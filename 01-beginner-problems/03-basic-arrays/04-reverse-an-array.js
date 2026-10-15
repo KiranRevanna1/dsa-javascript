@@ -6,8 +6,28 @@
 
 const { check } = require("../../lib/check");
 
-function solve(input) {
-  // your solution
+class Solution {
+    // Function to reverse the array in place
+    // The reversal should be done IN-PLACE.
+    // Do not return anything from this function.
+    reverse(arr, n) {
+        arr.reverse()
+    }
+}
+// OR 
+
+class Solution {
+    // Function to reverse the array in place
+    // The reversal should be done IN-PLACE.
+    // Do not return anything from this function.
+    reverse(arr, n) {
+        let first = 0, last=n-1
+        while(first<last){
+            [arr[first],arr[last]] = [arr[last], arr[first]];
+            first++;
+            last--;
+        }
+    }
 }
 
 // Tests: problem examples + 1 edge case (uncomment and fill)
