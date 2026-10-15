@@ -6,8 +6,16 @@
 
 const { check } = require("../../lib/check");
 
-function solve(input) {
-  // your solution
+class Solution {
+    countOdd(arr, n) {
+        let count = 0;
+        for(let i=0; i<n; i++){
+            if(arr[i] % 2 !== 0){
+                count++;
+            }
+        }
+        return count;
+    }
 }
 
 // Tests: problem examples + 1 edge case (uncomment and fill)
