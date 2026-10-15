@@ -2,7 +2,15 @@
 // Link: see Striver A2Z sheet → Linked List → Fundamentals Doubly LL
 // In my words:
 // Pattern:            | Time O(?), Space O(?)
-// Key idea:
+/*
+    Remember this pattern:
+    - current.next !== null → keep moving forward.
+    - current.prev !== null → keep moving backward.
+    - current.next === null → you've reached the tail.
+    4. One more important detail
+    Why do we write current.prev.next = null instead of current.next = null?
+    Because current is the tail. Its next is already null! We need to change the previous node's next pointer so that the previous node becomes the new tail.
+*/
 
 const { check } = require("../../lib/check");
 
