@@ -6,8 +6,19 @@
 
 const { check } = require("../../lib/check");
 
-function solve(input) {
-  // your solution
+
+class Solution {
+    deleteTail(head) {
+        if (head === null || head.next === null) {
+            return null;
+        }
+        let current = head;
+        while (current.next !== null) {
+            current = current.next;
+        }
+        current.prev.next = null;
+        return head;
+    }
 }
 
 // Tests: problem examples + 1 edge case (uncomment and fill)
