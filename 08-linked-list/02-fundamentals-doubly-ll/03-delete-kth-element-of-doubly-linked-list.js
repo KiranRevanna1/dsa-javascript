@@ -39,7 +39,6 @@ class Solution {
     }
 }
 
-
 // Tests: problem examples + 1 edge case (uncomment and fill)
 // check(solve(/* input */), /* expected */, "example 1");
 // check(solve(/* input */), /* expected */, "example 2");
