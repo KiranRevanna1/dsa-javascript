@@ -5,7 +5,11 @@
 - It places a pivot in its correct position, then recursively sorts the elements on either side.
 - Once you understand why partition() returns pivotIndex, the recursive calls become much easier to understand. 
 - Quick Sort swaps elements to move smaller values to the left of the pivot and larger values to the right. 
+
+The mental model: j searches, i tracks where the next smaller value belongs, and swapping puts that value in the correct section. 
+The final swap puts the pivot between the smaller and larger values.
 */
+
 const { check } = require("../../lib/check");
 
 
@@ -17,12 +21,12 @@ class Solution {
 
             for (let j = low; j < high; j++) {
                 if (arr[j] <= pivot) {
-                    i++;
-                    [arr[i], arr[j]] = [arr[j], arr[i]];
+                    i++; // Expands the smaller-elements section by one position
+                    [arr[i], arr[j]] = [arr[j], arr[i]]; // Moves a smaller value into that section
                 }
             }
 
-            [arr[i + 1], arr[high]] = [arr[high], arr[i + 1]];
+            [arr[i + 1], arr[high]] = [arr[high], arr[i + 1]]; // Places the pivot in its final position
 
             return i + 1;
         }
