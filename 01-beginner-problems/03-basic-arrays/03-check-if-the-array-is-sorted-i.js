@@ -6,8 +6,17 @@
 
 const { check } = require("../../lib/check");
 
-function solve(input) {
-  // your solution
+class Solution {
+    arraySortedOrNot(nums, n) {
+       for (let first = 0; first < n - 1; first++) {
+            for (let second = first + 1; second < n; second++) {
+                if (nums[first] > nums[second]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 }
 
 // Tests: problem examples + 1 edge case (uncomment and fill)
