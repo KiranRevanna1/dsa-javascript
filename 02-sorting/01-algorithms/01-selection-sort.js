@@ -6,21 +6,23 @@
 
 const { check } = require("../../lib/check");
 
+
 class Solution {
     selectionSort(nums) {
-        let n=nums.length-1
-        for(let i=0; i<=n; i++){
-            let minIndex=i;
-            for(let j=i; j<=n; j++){
-                if(nums[j]<nums[minIndex]){
-                    maxIndex=j
+        const n = nums.length;
+        for (let i = 0; i < n - 1; i++) {
+            let minIndex = i;
+            for (let j = i + 1; j < n; j++) {
+                if (nums[j] < nums[minIndex]) {
+                    minIndex = j;
                 }
             }
-            [nums[i],nums[minIndex]] = [nums[minIndex], nums[i]]
+            [nums[i], nums[minIndex]] = [nums[minIndex], nums[i]];
         }
         return nums;
     }
 }
+
 // Tests: problem examples + 1 edge case (uncomment and fill)
 // check(solve(/* input */), /* expected */, "example 1");
 // check(solve(/* input */), /* expected */, "example 2");
