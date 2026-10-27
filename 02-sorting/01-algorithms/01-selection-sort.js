@@ -9,7 +9,7 @@ const { check } = require("../../lib/check");
 class Solution {
     selectionSort(nums) {
         let n=nums.length-1
-        for(let i=0; i<=n; i--){
+        for(let i=0; i<=n; i++){
             let minIndex=i;
             for(let j=i; j<=n; j++){
                 if(nums[j]<nums[minIndex]){
