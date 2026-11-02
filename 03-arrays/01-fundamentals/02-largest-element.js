@@ -9,7 +9,7 @@ const { check } = require("../../lib/check");
     largestElement(nums) {
         let max = 0
         for(let i=0; i<nums.length; i++){
-            if(max < nums[i]){
+            if(nums[i] > max){
                 max = nums[i]
             }
         }
