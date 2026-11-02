@@ -1,7 +1,14 @@
 // Problem: Second Largest Element
 // Link: https://takeuforward.org/blogs/data-structure-and-algorithm/second-largest-element
 // In my words:
-// Pattern:            | Time O(?), Space O(?)
+/* Pattern:            
+    Remember this pattern:
+    - New maximum → old maximum becomes second maximum.
+    - Otherwise, check whether the number can become the second maximum.
+    - Ignore duplicates of the maximum.
+    Time: (O(n)) — one traversal.
+    space: (O(1)) — two variables.
+    */
 // Key idea:
 
 const { check } = require("../../lib/check");
