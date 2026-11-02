@@ -6,9 +6,23 @@
 
 const { check } = require("../../lib/check");
 
-function solve(input) {
-  // your solution
+class Solution {
+    secondLargestElement(nums) {
+        let largest = -Infinity;
+        let secondLargest = -Infinity;
+        for (let i = 0; i < nums.length; i++) {
+            if (nums[i] > largest) {
+                secondLargest = largest;
+                largest = nums[i];
+            }
+            else if (nums[i] > secondLargest && nums[i] < largest) {
+                secondLargest = nums[i];
+            }
+        }
+        return secondLargest === -Infinity ? -1 : secondLargest;
+    }
 }
+
 
 // Tests: problem examples + 1 edge case (uncomment and fill)
 // check(solve(/* input */), /* expected */, "example 1");
