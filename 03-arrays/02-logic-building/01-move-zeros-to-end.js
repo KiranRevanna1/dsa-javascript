@@ -1,7 +1,7 @@
 // Problem: Move Zeros to End
 // Link: https://leetcode.com/problems/move-zeroes/
 // In my words:
-// Pattern:            | Time O(?), Space O(?)
+// Pattern: J is used for tracking, i used for scanning            | Time O(n), Space O(1)
 // Key idea:
 
 const { check } = require("../../lib/check");
